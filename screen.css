@@ -1,0 +1,332 @@
+@keyframes "spin" {
+ from {
+    -webkit-transform: rotate(0deg);
+   	-moz-transform: rotate(0deg);
+   	-o-transform: rotate(0deg);
+   	-ms-transform: rotate(0deg);
+   	transform: rotate(0deg);
+ }
+ to {
+    -webkit-transform: rotate(359deg);
+   	-moz-transform: rotate(359deg);
+   	-o-transform: rotate(359deg);
+   	-ms-transform: rotate(359deg);
+   	transform: rotate(359deg);
+ }
+
+}
+
+@-moz-keyframes spin {
+ from {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -moz-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+
+}
+
+@-webkit-keyframes "spin" {
+ from {
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -webkit-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+
+}
+
+@-ms-keyframes "spin" {
+ from {
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -ms-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+
+}
+
+@-o-keyframes "spin" {
+ from {
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -o-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+}
+
+@keyframes "spin" {
+ from {
+    -webkit-transform: rotate(0deg);
+   	-moz-transform: rotate(0deg);
+   	-o-transform: rotate(0deg);
+   	-ms-transform: rotate(0deg);
+   	transform: rotate(0deg);
+ }
+ to {
+    -webkit-transform: rotate(359deg);
+   	-moz-transform: rotate(359deg);
+   	-o-transform: rotate(359deg);
+   	-ms-transform: rotate(359deg);
+   	transform: rotate(359deg);
+ }
+
+}
+
+@-moz-keyframes spin {
+ from {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -moz-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+}
+
+
+@-webkit-keyframes "reverse-spin" {
+ from {
+   -webkit-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+ to {
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+
+}
+
+@-ms-keyframes "spin" {
+ from {
+   -ms-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+ to {
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+
+}
+
+@-o-keyframes "spin" {
+ from {
+   -o-transform: rotate(359deg);
+   transform: rotate(359deg);
+ }
+ to {
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+}
+
+/*WHEEL OBJECT*/
+.wheel {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0), rgba(0,0,0,0) 61%, #000000 0%);
+/*    -webkit-animation: spin 1.5s infinite linear;*/
+/*	-moz-animation: spin 1.5s infinite linear;*/
+/*	-ms-animation: spin 1.5s infinite linear;*/
+/*	-o-animation: spin 1.5s infinite linear;*/
+/*	animation: spin 1.5s infinite linear;*/
+}
+
+/*CRANKS*/
+span[class*="crank"]{
+    position:absolute;
+    height: 10px;
+    width: 23%;
+    background-color: #C0C0C0;
+    top: 49%;
+    left: 50%;
+    transform-origin: 5% 45%;
+    border-radius: 25%;
+}
+.crankR{
+    z-index: -3;
+}
+.crankL{
+    z-index: 3;
+    transform: rotate(180deg);
+}
+
+/*PEDALS*/
+.pedal{
+    position:absolute;
+    height: 9px;
+    width: 60%;
+    top: 5%;
+    left: 70%;
+    transform-origin: 50% 50%;
+    background: radial-gradient(circle at 50% 50%, #FFFFFF, #FFFFFF 15%, #000000 0%);
+/*    -webkit-animation: reverse-spin 1.5s infinite linear;*/
+/*	-moz-animation: reverse-spin 1.5s infinite linear;*/
+/*	-ms-animation: reverse-spin 1.5s infinite linear;*/
+/*	-o-animation: reverse-spin 1.5s infinite linear;*/
+/*	animation: reverse-spin 1.5s infinite linear;*/
+}
+
+/*RIM*/
+.rim{
+    display: inline-block;
+    align-self: center;
+    top:5%;
+    left:5%;
+    width: 90%;
+    height: 90%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(192,192,192,0), rgba(0,0,0,0) 66%,	#C0C0C0 0%);
+}
+
+/*HUB*/
+.hub {
+    position:absolute;
+    top: 47%;
+    left: 47%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 0;
+}
+
+/*SPOKES*/
+div[class*="spoke"]{
+    height:2px;
+    width: 43%;
+    background-color: #C0C0C0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 100%;
+}
+div[class*="spokeL"]{ z-index: -1;}
+div[class*="spokeR"]{ z-index: 1;}
+
+/*RIGHT SPOKES*/
+.spokeR1{ transform: rotate(0deg);}
+.spokeR2{ transform: rotate(45deg);}
+.spokeR3{ transform: rotate(90deg);}
+.spokeR4{ transform: rotate(135deg);}
+.spokeR5{ transform: rotate(180deg);}
+.spokeR6{ transform: rotate(225deg);}
+.spokeR7{ transform: rotate(270deg);}
+.spokeR8{ transform: rotate(315deg);}
+
+/*LEFT SPOKES*/
+.spokeL1{ transform: rotate(22.5deg);}
+.spokeL2{ transform: rotate(67.5deg);}
+.spokeL3{ transform: rotate(112.5deg);}
+.spokeL4{ transform: rotate(157.5deg);}
+.spokeL5{ transform: rotate(202.5deg);}
+.spokeL6{ transform: rotate(247.5deg);}
+.spokeL7{ transform: rotate(292.5deg);}
+.spokeL8{ transform: rotate(337.5deg);}
+
+/*SEAT POST*/
+.seat-post{
+    position: absolute;
+    height: 50px;
+    width: 14px;
+    top: -40px;
+    left: 48.5%;
+    background-color: silver;
+}
+
+/*SEAT*/
+.seat{
+    position: absolute;
+    height: 18px;
+    width: 100px;
+    top: -58px;
+    left: 39.5%;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 15%;
+    border-top-right-radius: 90%;
+    border-bottom-right-radius: 40%;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(dodgerblue 50%, #404040); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(dodgerblue 50%, #404040); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(dodgerblue 50%, #404040); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(dodgerblue 50%, #404040); /* Standard syntax */
+}
+
+/*STEM*/
+.stem{
+    position: absolute;
+    width: 15px;
+    height: 10%;
+    background-color: dodgerblue;
+    top: 10px;
+    left: 48.5%;
+    border-radius: 10%;
+}
+
+/*FRAME*/
+span[class*="fork"]{
+    position: absolute;
+    width: 15px;
+    height: 43%;
+    background-color: dodgerblue;
+    top: 50px;
+    left: 48.5%;
+    border-radius: 10%;
+}
+.forkR{z-index: 2;}
+.forkL{z-index: -2;}
+
+/*ADJUST*/
+.adjust{
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    top:25%;
+    left: 30%;
+    background-color: black;
+}
+
+/*UNI SHADOW*/
+.unicycle .shadow {
+    position: absolute;
+    display: inline-block;
+    top:20px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+}
+
+.unicycle {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    display: inline-block;
+    margin-top: 50%;
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transform: rotateY(0.01deg);
+}
+body {
+    width: 300px;
+    margin: 20px auto;
+    background-repeat: no-repeat;
+}
+
