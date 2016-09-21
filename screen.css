@@ -63,32 +63,32 @@
  }
 }
 
-@keyframes "spin" {
+@keyframes "reverse-spin" {
  from {
-    -webkit-transform: rotate(0deg);
-   	-moz-transform: rotate(0deg);
-   	-o-transform: rotate(0deg);
-   	-ms-transform: rotate(0deg);
-   	transform: rotate(0deg);
- }
- to {
     -webkit-transform: rotate(359deg);
    	-moz-transform: rotate(359deg);
    	-o-transform: rotate(359deg);
    	-ms-transform: rotate(359deg);
    	transform: rotate(359deg);
  }
+ to {
+    -webkit-transform: rotate(0deg);
+   	-moz-transform: rotate(0deg);
+   	-o-transform: rotate(0deg);
+   	-ms-transform: rotate(0deg);
+   	transform: rotate(0deg);
+ }
 
 }
 
-@-moz-keyframes spin {
+@-moz-keyframes reverse-spin {
  from {
-   -moz-transform: rotate(0deg);
-   transform: rotate(0deg);
- }
- to {
    -moz-transform: rotate(359deg);
    transform: rotate(359deg);
+ }
+ to {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
  }
 }
 
@@ -105,7 +105,7 @@
 
 }
 
-@-ms-keyframes "spin" {
+@-ms-keyframes "reverse-spin" {
  from {
    -ms-transform: rotate(359deg);
    transform: rotate(359deg);
@@ -117,7 +117,7 @@
 
 }
 
-@-o-keyframes "spin" {
+@-o-keyframes "reverse-spin" {
  from {
    -o-transform: rotate(359deg);
    transform: rotate(359deg);
@@ -129,21 +129,28 @@
 }
 
 /*WHEEL OBJECT*/
-.wheel {
+.base {
     display: inline-block;
     width: 100%;
     height: 100%;
     margin: 0;
     border-radius: 50%;
     position: relative;
-    background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0), rgba(0,0,0,0) 61%, #000000 0%);
-/*    -webkit-animation: spin 1.5s infinite linear;*/
-/*	-moz-animation: spin 1.5s infinite linear;*/
-/*	-ms-animation: spin 1.5s infinite linear;*/
-/*	-o-animation: spin 1.5s infinite linear;*/
-/*	animation: spin 1.5s infinite linear;*/
 }
-
+.wheel{
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0), rgba(0,0,0,0) 61%, #000000 0%);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    -webkit-animation: spin 1.5s infinite linear;
+	-moz-animation: spin 1.5s infinite linear;
+	-ms-animation: spin 1.5s infinite linear;
+	-o-animation: spin 1.5s infinite linear;
+	animation: spin 1.5s infinite linear;
+}
 /*CRANKS*/
 span[class*="crank"]{
     position:absolute;
@@ -172,11 +179,14 @@ span[class*="crank"]{
     left: 70%;
     transform-origin: 50% 50%;
     background: radial-gradient(circle at 50% 50%, #FFFFFF, #FFFFFF 15%, #000000 0%);
-/*    -webkit-animation: reverse-spin 1.5s infinite linear;*/
-/*	-moz-animation: reverse-spin 1.5s infinite linear;*/
-/*	-ms-animation: reverse-spin 1.5s infinite linear;*/
-/*	-o-animation: reverse-spin 1.5s infinite linear;*/
-/*	animation: reverse-spin 1.5s infinite linear;*/
+}
+
+.center{
+    -webkit-animation: spin 1.5s infinite linear;
+	-moz-animation: spin 1.5s infinite linear;
+	-ms-animation: spin 1.5s infinite linear;
+	-o-animation: spin 1.5s infinite linear;
+	animation: spin 1.5s infinite linear;
 }
 
 /*RIM*/
@@ -189,8 +199,13 @@ span[class*="crank"]{
     height: 90%;
     margin: 0;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     background: radial-gradient(circle at 50% 50%, rgba(192,192,192,0), rgba(0,0,0,0) 66%,	#C0C0C0 0%);
+    -webkit-animation: spin 1.5s infinite linear;
+	-moz-animation: spin 1.5s infinite linear;
+	-ms-animation: spin 1.5s infinite linear;
+	-o-animation: spin 1.5s infinite linear;
+	animation: spin 1.5s infinite linear;
 }
 
 /*HUB*/
@@ -291,20 +306,21 @@ span[class*="fork"]{
 .forkL{z-index: -2;}
 
 /*ADJUST*/
-.adjust{
-    position:absolute;
-    width: 10px;
+.adjust {
+    position: absolute;
+    width: 20px;
     height: 10px;
-    top:25%;
-    left: 30%;
+    top: 2%;
+    left: 48%;
     background-color: black;
+    border-radius: 0px 0px 0px 30px;
 }
 
 /*UNI SHADOW*/
 .unicycle .shadow {
     position: absolute;
     display: inline-block;
-    top:20px;
+    top: 3%;
     left: 0px;
     width: 100%;
     height: 100%;
@@ -330,3 +346,4 @@ body {
     background-repeat: no-repeat;
 }
 
+  
