@@ -155,7 +155,7 @@
 span[class*="crank"]{
     position:absolute;
     height: 10px;
-    width: 23%;
+    width: 35%;
     background-color: #C0C0C0;
     top: 49%;
     left: 50%;
@@ -179,6 +179,11 @@ span[class*="crank"]{
     left: 70%;
     transform-origin: 50% 50%;
     background: radial-gradient(circle at 50% 50%, #FFFFFF, #FFFFFF 15%, #000000 0%);
+        -webkit-animation: reverse-spin 1.5s infinite linear;
+	-moz-animation: reverse-spin 1.5s infinite linear;
+	-ms-animation: reverse-spin 1.5s infinite linear;
+	-o-animation: reverse-spin 1.5s infinite linear;
+	animation: reverse-spin 1.5s infinite linear;
 }
 
 .center{
